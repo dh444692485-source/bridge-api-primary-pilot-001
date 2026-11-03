@@ -1,0 +1,113 @@
+{
+  "task": "Bridge-Autonomous-Loop-Pilot-001-Continuation003",
+  "state": "DEPLOYED_PAUSED_NOT_CLOSED_LOOP_ACCEPTANCE",
+  "at": "2026-11-03T07:32:41.116829+00:00",
+  "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+  "runtime_source_unchanged": true,
+  "request_sha256": "bab0ba96fa819d16385fedfa6eded683d30b49a526c83979c007b76d5e8e227c",
+  "owner_answer": "批准同窗独立接续，额度及截止不变",
+  "grant_sha256": "1b533319dd3b68d7fad33d439cb987153abeb93074b3a7581840a71853b90bb7",
+  "original_expiry": "2026-11-03T08:40:39.822315Z",
+  "formal_branch": "codex/api-loop-formal-003",
+  "execution_branch": "codex/api-loop-execution-003",
+  "protection_ruleset": 26430479,
+  "models": "gpt-6.1-sol / low / Standard",
+  "pre_native_reconciliation_sha256": "1fe89a79a4c6f90e0bc3fcd815b02b25faf43a76486b25a2648aedd90f5f800e",
+  "old_native_row": "FAILED / UNKNOWN_NO_REPLAY retained in original root; new continuation authorized only after pre-native evidence reconciliation",
+  "old_stops_preserved": true,
+  "new_ledger_includes_prior_consumption": {
+    "reviewer": [
+      {
+        "resource": "cost_microusd",
+        "used": 78150
+      },
+      {
+        "resource": "github_reads",
+        "used": 34
+      },
+      {
+        "resource": "github_writes",
+        "used": 6
+      },
+      {
+        "resource": "polls",
+        "used": 5
+      },
+      {
+        "resource": "publications",
+        "used": 1
+      },
+      {
+        "resource": "responses",
+        "used": 1
+      },
+      {
+        "resource": "starts",
+        "used": 1
+      }
+    ],
+    "executor": [
+      {
+        "resource": "github_reads",
+        "used": 29
+      },
+      {
+        "resource": "github_writes",
+        "used": 3
+      },
+      {
+        "resource": "model_reads",
+        "used": 4
+      },
+      {
+        "resource": "native",
+        "used": 1
+      },
+      {
+        "resource": "starts",
+        "used": 1
+      }
+    ]
+  },
+  "carry_sha256": {
+    "executor": "a78d08ff60a28ed73f2ca3b6ed393052fbe03c827323b1098a8e27ea90557624",
+    "reviewer": "6837f8bc33efb7b0d628450dbf19558aa40727be7d0345c37891d12005a1dc61"
+  },
+  "pause_epoch": "53f47c80-b74d-4c34-a591-20bf877e1372",
+  "both_pause_confirmed": true,
+  "acl_repair": {
+    "role": "executor",
+    "rights_mask": 128,
+    "inheritance": "None",
+    "directory_count": 5,
+    "real_identity_worker_check": "PASS",
+    "old_two_failures_retained": true
+  },
+  "wrapper_failure": {
+    "error": "KeyError id when constructing reviewer enable receipt",
+    "enable_and_import_reconciled": true,
+    "enable_replayed": false,
+    "model_generations_during_setup": 0
+  },
+  "control_path_adjustment": "Dedicated continuation003 directory with contract-required LOOP_CONTROL.json name; first local validation rejection preserved",
+  "files_sha256": {
+    "BOUND_GRANT.json": "1b533319dd3b68d7fad33d439cb987153abeb93074b3a7581840a71853b90bb7",
+    "ACTIVATION_BINDING.json": "89126f19faf2c6ce7e2e08e0348a5874406738e54e7e4d83e30279dbef52098b",
+    "enable_continuation.py": "f4aa0709c845181e44fd93adabc34d8e7989cf1edc39b00c4bd175f4d2eb37a8",
+    "bind_continuation.py": "9da9e25f13266c8994c613f3bb2c8952b62a5a860a243ad30dc1d181efddfce5",
+    "deploy_continuation.ps1": "eda10ae4f1024a6dccc45ab94494d9d1478d4d614fdddfc4072da8b3b2821c10",
+    "finish_deployment.ps1": "e65e488a4198f8699d45b409cd5b30d01b377eb33e4529c2a8b4522b528fa27f",
+    "complete_reviewer_receipt.py": "e704e11e40b1beebdd076e04e85e604ad0a107a75686a63b77dcb1863a62e6b7"
+  },
+  "owner_interventions_since_original_release": [
+    {
+      "kind": "Stage autonomy supplement"
+    },
+    {
+      "kind": "Two-failure escalation approved"
+    },
+    {
+      "kind": "Two additional branches and one ruleset approved; no model/expense/runtime-cap increase"
+    }
+  ]
+}
