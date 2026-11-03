@@ -1,0 +1,36 @@
+{
+  "request_id": "Bridge-Autonomous-Loop-Pilot-001-Rework003",
+  "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+  "request_sha256": "c8e5353dfbe10c158d31e566094d410836ba4481720ff399b3d65362526af00a",
+  "owner_approval": "项目总监指令：启动 Rework003 已批准的两单真实闭环试点。\n\nOwner 已批准，无需重复申请同一范围的授权。\n\n候选提交：\n384e46df92fc799da51a4441659fa82f253684b8\n\n授权申请 SHA-256：\nc8e5353dfbe10c158d31e566094d410836ba4481720ff399b3d65362526af00a\n\n执行要求：\n1. 保存本轮 Owner 批准原文，绑定准确申请和候选；\n   按申请落实批准后24小时内启用及7200秒运行窗口。\n2. 启用前 fresh-read 授权、远端状态、服务身份、凭证有效性\n   和两角色模型准入；核验通过后部署准确候选并回读。\n3. 将批准、总监复核结论及部署绑定留存 GitHub。\n4. 两端保持 gpt-6.1-sol / low / Standard。\n   新增预算执行 $10、审核 $3；其他次数限制按批准申请执行。\n   旧消费、预约、STOP 和账本完整保留。\n5. 串行推进 NORMALIZE → REPORT，自动派单、回传、审核、\n   必要返工及接续；每次只推进一单。\n6. UNKNOWN 先有界只读对账，不盲目重发或重放。\n   暂停、预算、窗口及其他停止条件严格执行；\n   出现需修改冻结源码的问题，停止并报告。\n7. 完成或阻塞后提交简明结果：两单状态、GitHub 证据、\n   实际用量与预约、最终停止状态、放行后人工介入次数。\n\n验收目标：证明真实自动闭环成立。\n服务启动和单次 API 成功均不能替代闭环验收。\n",
+  "owner_approval_sha256": "399280ec0973107e5a4a0a285c6fb7a5c5d6fa89be638e5e2bea77fbb02b6953",
+  "director_conclusion": "Project director instructed activation of the Owner-approved exact candidate. No additional review report invented.",
+  "deployment": {
+    "state": "BOTH_ROLES_PAUSED",
+    "observed_utc": "2026-11-03T06:42:10.976860Z",
+    "grant_sha256": "ea4f877afeee30a2ac83b001a290fa6cd887a8f865130357b517686b42f4d362",
+    "window": {
+      "valid_from": "2026-11-03T06:40:39.822315Z",
+      "expires_at": "2026-11-03T08:40:39.822315Z"
+    },
+    "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+    "roles": [
+      "BridgeApiReviewer",
+      "BridgeApiExecutor"
+    ],
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "service_tier": "default",
+    "formal_ruleset": 26428689
+  },
+  "new_budget_usd": {
+    "executor": 10,
+    "reviewer": 3
+  },
+  "old_history_retained": true,
+  "task_states": {
+    "NORMALIZE": "NOT_DISPATCHED",
+    "REPORT": "NOT_STARTED"
+  },
+  "formal_review_status": "NOT_YET_REVIEWED"
+}
