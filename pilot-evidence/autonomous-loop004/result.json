@@ -1,0 +1,57 @@
+{
+  "task": "Bridge-Autonomous-Loop-Pilot-001",
+  "continuation": "004",
+  "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+  "result": "BLOCKED_STAGE_INCOMPLETE",
+  "record_kind": "operator_stage_result_not_model_review",
+  "tasks": {
+    "NORMALIZE-r1": {
+      "formal_status": "READY",
+      "dispatch_review": "INITIAL_DISPATCH_PASS",
+      "execution": "FAILED",
+      "exit_code": 1,
+      "code_review": "NOT_STARTED",
+      "engineering_commit": null
+    },
+    "REPORT-r1": {
+      "dispatch": "NOT_STARTED",
+      "execution": "NOT_STARTED",
+      "code_review": "NOT_STARTED"
+    }
+  },
+  "failure": {
+    "native_exit_code": 1,
+    "category": "Codex filesystem sandbox helper initialization failed",
+    "executor_model_requests": 0,
+    "root_cause": "Not yet proven"
+  },
+  "formal_dispatch_commit": "8790b6126b22658f5eabc06087e51cf5be599b54",
+  "execution_head": "568c78eab48f3858d962d62dff7510c00a1458ee",
+  "usage": {
+    "review_responses": 3,
+    "code_reviews": 0,
+    "estimated_review_usd": 0.02369,
+    "reserved_review_usd": 0.23445,
+    "executor_model_usd": 0,
+    "native_used": 3,
+    "native_cap": 4,
+    "executor_starts_used": 6,
+    "executor_starts_cap": 6,
+    "historical_separate_estimated_usd": 0.040275,
+    "historical_separate_reserved_usd": 0.3819,
+    "invoice_reconciled": false
+  },
+  "stop": {
+    "both_services_stopped": true,
+    "persistent_stop_both": true,
+    "reviewer_pause_confirmed": true,
+    "executor_pause_confirmed": false,
+    "old_records_preserved": true
+  },
+  "owner_interventions": {
+    "since_initial002_release": 4,
+    "after004_release": 0
+  },
+  "notification": "https://github.com/dh444692485-source/bridge-api-primary-pilot-001/issues/9",
+  "remaining": "Both engineering deliveries, independent code reviews and automatic final closure remain incomplete. Startup capacity exhausted; one native slot is insufficient for two tasks. No replay authorized."
+}
