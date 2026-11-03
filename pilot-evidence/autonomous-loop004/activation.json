@@ -1,0 +1,115 @@
+{
+  "task": "Bridge-Autonomous-Loop-Pilot-001-Continuation004",
+  "state": "DEPLOYED_PAUSED_NOT_CLOSED_LOOP_ACCEPTANCE",
+  "observed_utc": "2026-11-03T08:14:42.430244+00:00",
+  "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+  "runtime_modules_unchanged": true,
+  "owner_answer": "批准集中接续，费用及截止不变",
+  "request_sha256": "f7d55383153764bdce96e9ed5b25b1cf02c395fe44871b76731dc99c4baf7e40",
+  "grant_sha256": "0cf6250c6a90e30a29d405e5d8ac862394d5a26a7a3603d10f04f4b4a221e84d",
+  "expires_at": "2026-11-03T08:40:39.822315Z",
+  "branches": {
+    "formal": "codex/api-loop-formal-004",
+    "execution": "codex/api-loop-execution-004"
+  },
+  "ruleset_id": 26432581,
+  "models": "gpt-6.1-sol / low / Standard",
+  "task_list": [
+    "NORMALIZE",
+    "REPORT"
+  ],
+  "real_SCM_preflight": {
+    "state": "REAL_SCM_IDENTITY_PASS",
+    "principal": "S-1-5-21-3491213769-999587425-2049179211-1006",
+    "pid": 26816,
+    "at": 1793693588.408282,
+    "command": [
+      "D:\\BridgeApi\\pilot-001\\autonomous-loop002\\services\\continuation003\\binary-candidate\\codex.exe"
+    ],
+    "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+    "runtime_source_changed": false,
+    "native_calls": 0,
+    "model_calls": 0
+  },
+  "startup_bootstrap": "Runs only pinned identity checks, then original bridge.api_review_host via original package path in the same SCM start; no replacement scheduler or model call.",
+  "startup_bootstrap_sha256": "3e9f476c3516f4bb650c54abcb0401c622d29c8710cf2c7b5c4d1a9cd1a8d142",
+  "source_and_config_version_note": "SCM startup config includes pinned identity preflight; then it loads unchanged original Host. All startup/config artifacts separately hashed; historical acceptance does not cover these new config checks.",
+  "original_stops_unknown_and_spend_preserved": true,
+  "carry_sha256": {
+    "executor": "48e910812b7132b31d2e6364ea711a4d4953e7acbc599c3ef5167abe532d7be4",
+    "reviewer": "2a951958fb3a43c8bbb3591fe9450780cca22bdecb06d3d95df85de16601bc0a"
+  },
+  "consumption_after_enable": {
+    "reviewer": [
+      {
+        "resource": "cost_microusd",
+        "used": 156300
+      },
+      {
+        "resource": "github_reads",
+        "used": 69
+      },
+      {
+        "resource": "github_writes",
+        "used": 11
+      },
+      {
+        "resource": "polls",
+        "used": 8
+      },
+      {
+        "resource": "publications",
+        "used": 2
+      },
+      {
+        "resource": "responses",
+        "used": 2
+      },
+      {
+        "resource": "starts",
+        "used": 2
+      }
+    ],
+    "executor": [
+      {
+        "resource": "github_reads",
+        "used": 54
+      },
+      {
+        "resource": "github_writes",
+        "used": 5
+      },
+      {
+        "resource": "model_reads",
+        "used": 6
+      },
+      {
+        "resource": "native",
+        "used": 2
+      },
+      {
+        "resource": "starts",
+        "used": 5
+      }
+    ]
+  },
+  "remaining_before_normal_start_note": "Executor starts now cumulatively 6/6; native 2/4 used; reviewer responses 2/5 used. Normal Host must stop at original caps and deadline.",
+  "prior_attempts": {
+    "002_dispatch": "d8bd415a9e87a8a84f3f35c49726e7051592f7bd",
+    "003_dispatch": "479a500a6449e030f8782cabbea73575c52d0416",
+    "both_native": "FAILED/UNKNOWN_NO_REPLAY preserved; no task directory or executor API request/publication",
+    "reconciliation_basis": "Exact frozen call ordering requires durable workspace/start marker before native process; actual SCM traceback reproduced identity failure before workspace creation."
+  },
+  "binary_relocation": "Exact original SHA images copied to service directory; initial forward-slash binding rejected by strict string comparison, corrected to canonical Windows path; actual SCM full identity check now PASS.",
+  "files_sha256": {
+    "BOUND_GRANT.json": "0cf6250c6a90e30a29d405e5d8ac862394d5a26a7a3603d10f04f4b4a221e84d",
+    "ACTIVATION_BINDING.json": "d3def1aa312b3fde740dc630257db385eb13ceaccd18dd18373f6193279dfb0e",
+    "enable_continuation.py": "f4aa0709c845181e44fd93adabc34d8e7989cf1edc39b00c4bd175f4d2eb37a8",
+    "executor_startup.py": "3e9f476c3516f4bb650c54abcb0401c622d29c8710cf2c7b5c4d1a9cd1a8d142",
+    "bind004.py": "cecb522f0c17bbb7ed38f2fb1635d2776a48ac9eace13ef5b13cad41daf8bbd0",
+    "deploy_continuation.ps1": "a7a37f4e33e69889ccde4a3e51e0debca2c8d24d4f12ca0517f33d97f9f18cdd",
+    "SCM_STARTUP_PREFLIGHT.json": "796a29f9173c0618d52f034aa4a1d3943ff3da611b05c2f43f3e318a23cf3ce8"
+  },
+  "owner_interventions_since_original_release": 4,
+  "owner_interventions_since_004_release": 0
+}
