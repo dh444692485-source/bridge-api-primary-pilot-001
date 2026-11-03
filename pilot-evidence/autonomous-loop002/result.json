@@ -1,0 +1,134 @@
+{
+  "task_id": "Bridge-Autonomous-Loop-Pilot-001-Rework003",
+  "observed_utc": "2026-11-03T06:50:04.329179+00:00",
+  "result": "BLOCKED_REAL_CLOSED_LOOP_NOT_ESTABLISHED",
+  "source_commit": "384e46df92fc799da51a4441659fa82f253684b8",
+  "request_sha256": "c8e5353dfbe10c158d31e566094d410836ba4481720ff399b3d65362526af00a",
+  "window": {
+    "start": "2026-11-03T06:40:39.822315Z",
+    "end": "2026-11-03T08:40:39.822315Z"
+  },
+  "tasks": {
+    "NORMALIZE-r1": {
+      "formal": "READY_DISPATCH_PUBLISHED",
+      "execution": "FAILED_PERMISSION_ERROR_NO_EXECUTION_RECEIPT",
+      "acceptance": "NOT_REVIEWED"
+    },
+    "REPORT-r1": {
+      "formal": "NOT_DISPATCHED",
+      "execution": "NOT_STARTED",
+      "acceptance": "NOT_REVIEWED"
+    }
+  },
+  "last_confirmed_success": "API INITIAL_DISPATCH PASS -> GitHub READY publication -> executor automatic claim; initial PASS is not code acceptance.",
+  "first_failure": {
+    "code": "PermissionError",
+    "dispatch_key": "NORMALIZE-r1",
+    "native_reservation_consumed": true,
+    "native_result": "UNKNOWN_NO_REPLAY"
+  },
+  "consumed": {
+    "reviewer": {
+      "github_reads": 30,
+      "github_writes": 5,
+      "polls": 4,
+      "starts": 1,
+      "responses": 1,
+      "cost_microusd": 78150,
+      "publications": 1
+    },
+    "executor": {
+      "github_reads": 25,
+      "github_writes": 2,
+      "model_reads": 3,
+      "starts": 1,
+      "native": 1
+    }
+  },
+  "actual_provider_usage": {
+    "input_tokens": 1090,
+    "input_tokens_details": {
+      "cache_write_tokens": 1087,
+      "cached_tokens": 0
+    },
+    "output_tokens": 236,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 1326
+  },
+  "estimated_cost_usd": 0.00781,
+  "cost_basis": "Grant-bound conservative input/output rates, not provider invoice; usage includes cache-write tokens.",
+  "reservation_usd": 0.07815,
+  "executor_model_calls": 0,
+  "executor_cost_reservation_usd": 0,
+  "independent_validations": 0,
+  "reworks": 0,
+  "formal_code_reviews": 0,
+  "formal_publications": 1,
+  "old_consumption_retained": {
+    "reviewer_responses": 1,
+    "estimate_usd": 0.040275,
+    "reservation_usd": 0.3819
+  },
+  "remaining_arithmetic": {
+    "executor": {
+      "cost_microusd": 10000000,
+      "github_reads": 1475,
+      "github_writes": 33,
+      "model_reads": 5,
+      "model_requests": 24,
+      "native": 3,
+      "publications": 8,
+      "starts": 3,
+      "validation": 4
+    },
+    "reviewer": {
+      "cost_microusd": 2921850,
+      "github_reads": 1470,
+      "github_writes": 25,
+      "polls": 396,
+      "publications": 4,
+      "responses": 4,
+      "starts": 3
+    }
+  },
+  "remaining_is_restart_authorization": false,
+  "stopped": {
+    "both_api_stop_present": true,
+    "both_scm_stopped": true,
+    "control_paused": true,
+    "reviewer_pause": "CONFIRMED",
+    "executor_pause": "UNCONFIRMED_NATIVE_RESULT_UNKNOWN",
+    "operator_stop": "Invoked existing disable under approved stop rules; generated reason is OWNER_DISABLED; no new Owner pause message inferred."
+  },
+  "owner_interventions_after_release": 0,
+  "operator_exception_actions": [
+    "Global pause",
+    "Persistent disable and SCM stop both roles",
+    "Read-only path diagnosis"
+  ],
+  "notifications": {
+    "automatic_confirmed": 1,
+    "url": "https://github.com/dh444692485-source/bridge-api-primary-pilot-001/issues/7",
+    "http_GET": 3,
+    "http_POST": 2
+  },
+  "github": {
+    "source": "https://github.com/dh444692485-source/codex-review-bridge/commit/384e46df92fc799da51a4441659fa82f253684b8",
+    "activation": "https://github.com/dh444692485-source/bridge-api-primary-pilot-001/blob/94e86c531b7d5c4a03613c5f9f8b12be9140c988/pilot-evidence/autonomous-loop002/activation.json",
+    "dispatch": "https://github.com/dh444692485-source/bridge-api-primary-pilot-001/blob/d8bd415a9e87a8a84f3f35c49726e7051592f7bd/manager/api-review/records/NORMALIZE-r1-dispatch.json",
+    "current": "https://github.com/dh444692485-source/bridge-api-primary-pilot-001/blob/d8bd415a9e87a8a84f3f35c49726e7051592f7bd/manager/api-review/current.json",
+    "formal_head": "d8bd415a9e87a8a84f3f35c49726e7051592f7bd",
+    "execution_head": "568c78eab48f3858d962d62dff7510c00a1458ee"
+  },
+  "setup_consumed": {
+    "GET": 17,
+    "WRITE": 4,
+    "source_push": 1
+  },
+  "C": "FROZEN_UNCHANGED",
+  "production_auto": "HOLD",
+  "infrastructure_spend_usd": 0,
+  "blocker": "Executor service identity received WinError 5 during pre-native ancestor-path attribute checks. No replay; details in private local evidence."
+}
