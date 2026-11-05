@@ -1,0 +1,72 @@
+{
+  "api_requests_sha256": "e1ef56ce3561213077abe6f8ded05bc605419d52a90c906bc8ae76eae2c72074",
+  "artifact_sha256": {
+    "pilot/display.py": "cb93c3febd06df403ce7e4548f856be180a60190809b445f6db4d51dc250d6b0",
+    "pilot/normalize.py": "b0878243289100d3b76f4b874f8bbad7623de589f6e71b1e70a754719ae728b0",
+    "pilot/report.py": "8d55c1d6883f9c6aa26174aa04ab7120a5e2c6303a380be4cc5134815bc87f32",
+    "pilot/verify_display.py": "ea81ec7983ca2a0c4d955c49b7e61c074db9b31bd91e477b552591c47231d126"
+  },
+  "baseline_local_commit": "81cf99eeac42740368be28f032eebbc8148df396",
+  "denials_sha256": "dbbe2c27c293ebc7ae29e1295b79faa260f699e7f99e28adea9a7aabe98f2b51",
+  "dispatch_key": "DISPLAY-r1",
+  "files_sha256": {
+    "events": "716a8e6bb34a2ce98cc784f29942094d6ca53b9432277aad4d03d63dc711cb9f",
+    "git_config": "952133450661aadd822f24f9e6959a373e7bd67fb5bec7af73bf54bbeef6cae7",
+    "grant": "4baca9152722d8bbfff43cfac80e72675e7d752e032a66ea7358adaf5965ec7e",
+    "input": "39295cbae28556ba9f6565e8d0c506d95aed06618b3e15b37b9a38b4bb08a322",
+    "native": "d4614427f6198b076ee80784eadd15114b7392d63b06c33e4c2c8c30e0cfa6b1",
+    "profile": "5905213f296b5e229aca552f7c896fb595d30aac69afaaf1366a57a544ac02f5",
+    "stop": "3573398a99ba5a371917bf82790202e9aa5ff4670805f40b1c030815b5a16f14"
+  },
+  "local_commit": "d25686130b998412f3d4cfa8af84a1583eeff5fb",
+  "mode": "sealed-files",
+  "sealed_git_config_sha256": "3b96c64f01a43bbb57e3ceafeb5410cdd527a94c10e70dda431ab3fdb1c8d7d4",
+  "sealed_workspace": "D:\\BridgePilot\\ordinary-chat-001\\personal-api-console016-recovery-pagefix\\executor\\sealed-workspace",
+  "sealing": {
+    "at": 1793862812.0240476,
+    "kind": "offline_exact_file_copy_and_git_commit",
+    "new_engineering_generations": 0,
+    "new_model_requests": 0,
+    "original_native_exit_code": 1
+  },
+  "source_claim_id": "1d52875b-5a9b-4b44-abbd-4b037dd4964f",
+  "source_grant_sha256": "4baca9152722d8bbfff43cfac80e72675e7d752e032a66ea7358adaf5965ec7e",
+  "source_root": "D:\\BridgePilot\\ordinary-chat-001\\personal-api-console016\\executor",
+  "source_run_sha256": "c99b234cde682fed62e155698ceef699c9986703bd5103adf58950f397abfeda",
+  "spec": {
+    "context_paths": [
+      "pilot/normalize.py",
+      "pilot/report.py"
+    ],
+    "dispatch_key": "DISPLAY-r1",
+    "expected_sha256": {
+      "pilot/display.py": null,
+      "pilot/normalize.py": "b0878243289100d3b76f4b874f8bbad7623de589f6e71b1e70a754719ae728b0",
+      "pilot/report.py": "8d55c1d6883f9c6aa26174aa04ab7120a5e2c6303a380be4cc5134815bc87f32",
+      "pilot/verify_display.py": null
+    },
+    "external_review": true,
+    "files": [
+      {
+        "operation": "create",
+        "path": "pilot/display.py"
+      },
+      {
+        "operation": "create",
+        "path": "pilot/verify_display.py"
+      }
+    ],
+    "max_attempts": 1,
+    "parent": "a204c9c3a43d2a0f75fabbc2763d920cf18c92b1",
+    "requirement": "新增 pilot/display.py：实现 display_counts(values)，复用现有 normalize_counts，将结果格式化为 count=N; total=N; maximum=N 的单行字符串。仅使用标准库，保持已有 NORMALIZE 和 REPORT 不变。\n\n验收条件：\n新增 pilot/verify_display.py，使用 unittest 覆盖空列表、零值、多整数、精确格式、bool／float／非列表／负数拒绝，以及输入不变。python pilot/verify_display.py 必须运行测试并在失败时非零退出。不得引入文件或网络副作用；交付须通过独立 API 代码审核。",
+    "validation": [
+      {
+        "args": [],
+        "runner": "python",
+        "script": "pilot/verify_display.py",
+        "timeout_seconds": 30
+      }
+    ]
+  },
+  "version": "bridge-artifact-recovery-v1"
+}
